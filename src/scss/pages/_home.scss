@@ -1,2 +1,4 @@
+@use "../utilities/variables" as var;
+@use "../base/typography" as type;
 @use "../components/header";
 @use "../components/card";

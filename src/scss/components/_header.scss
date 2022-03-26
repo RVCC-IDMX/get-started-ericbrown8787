@@ -1,0 +1,7 @@
+@use "../utilities/variables" as var;
+@use "../base/typography" as type;
+
+* {
+  font-family: type.$body-font;
+  font-variation-settings: type.$body-wght;
+}
