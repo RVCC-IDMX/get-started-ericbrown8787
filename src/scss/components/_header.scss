@@ -1,7 +1,76 @@
+@use "../utilities/mixins" as mix;
 @use "../utilities/variables" as var;
 @use "../base/typography" as type;
 
-* {
-  font-family: type.$body-font;
-  font-variation-settings: type.$body-wght;
+.nav {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: space-between;
+  align-items: center;
+  padding-inline: 15px;
+  padding-block: 12px;
+  @include mix.base-box-styles;
+
+  &__toggle {
+    justify-self: right;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    width: 36px;
+    height: 36px;
+  }
+
+  &__checkbox:checked ~ &__menu {
+    display: flex;
+  }
+
+  &__hamburger-menu {
+    top: 18px;
+  }
+
+  &__hamburger-menu,
+  &__hamburger-menu::before,
+  &__hamburger-menu::after {
+    content: "";
+    width: 100%;
+    height: 4px;
+    background-color: #04805e;
+    border-radius: 2px;
+    transition: transform 1s;
+  }
+
+  &__hamburger-menu::before,
+  &__hamburger-menu::after {
+    position: absolute;
+  }
+
+  &__hamburger-menu::before {
+    top: 12px;
+  }
+
+  &__hamburger-menu::after {
+    bottom: 8px;
+  }
+
+  &__checkbox {
+    display: none;
+  }
+
+  &__menu {
+    display: none;
+    grid-column: span 2;
+    gap: 16px;
+    text-align: center;
+    list-style: none;
+    padding-block: 0.8rem;
+
+    flex-direction: column;
+    a {
+      text-decoration: none;
+      color: black;
+      font-variation-settings: type.$nav-link-wght;
+      font-size: 1.5rem;
+    }
+  }
 }

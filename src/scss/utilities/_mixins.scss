@@ -1,0 +1,6 @@
+@use "variables" as var;
+
+@mixin base-box-styles {
+  background-color: var.$body-box-background-color;
+  box-shadow: var.$body-box-shadow;
+}
