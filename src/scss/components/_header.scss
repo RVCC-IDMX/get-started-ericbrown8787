@@ -105,7 +105,7 @@
   }
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: var.$breakpoint-tablet) {
   .nav {
     display: flex;
     padding-inline: 33px;
@@ -138,7 +138,7 @@
   }
 }
 
-@media screen and (min-width: 1080px) {
+@media screen and (min-width: var.$breakpoint-desktop) {
   .nav {
     padding-inline: 70px;
     padding-block: 20px;

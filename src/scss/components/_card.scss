@@ -1,3 +1,56 @@
 @use "../utilities/variables" as var;
 @use "../base/typography" as type;
 @use "../utilities/mixins" as mix;
+
+.hero {
+  &__wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    counter-reset: number;
+  }
+}
+
+.card {
+  @include mix.base-box-styles;
+  text-align: center;
+  position: relative;
+  padding: 2rem;
+  width: 320px;
+  height: 260px;
+  margin: 0.5rem;
+  border-radius: 0.5rem;
+
+  &__title {
+    margin: 2rem 0 1rem 0;
+  }
+
+  &::before {
+    background-color: var.$accent-color;
+    width: 64px;
+    height: 64px;
+    position: absolute;
+    display: block;
+    counter-increment: number;
+    content: counter(number);
+    border-radius: 50%;
+    top: -32px;
+    left: calc(50% - 32px);
+    //typography properties for numbering
+    font-size: 3rem;
+    line-height: -2rem;
+    font-variation-settings: type.$card-counter-wght;
+  }
+}
+
+@media screen and (min-width: var.$breakpoint-desktop) {
+  .hero {
+    &__wrapper {
+      gap: unset;
+      justify-content: space-between;
+    }
+  }
+}

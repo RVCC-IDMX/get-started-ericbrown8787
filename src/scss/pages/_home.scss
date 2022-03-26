@@ -8,3 +8,25 @@ body {
   background-color: var.$page--background-color;
   font-family: type.$body-font;
 }
+
+main {
+  max-width: 1280px;
+  margin-inline: auto;
+}
+
+article {
+  margin-block: 70px;
+  margin-inline: auto;
+  max-width: 1080px;
+}
+
+.hero {
+  text-align: center;
+  &__heading {
+    margin-block-end: 90px;
+    font-size: 3rem;
+  }
+}
+
+@media screen and (min-width: var.$breakpoint-tablet) {
+}
