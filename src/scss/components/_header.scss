@@ -68,7 +68,7 @@
   }
 }
 
-//Hamburger menu transition effect
+//Hamburger menu transition effect and menu scale-in
 
 .nav {
   &__hamburger-menu {
@@ -101,6 +101,54 @@
     100% {
       opacity: 100%;
       transform: scale(100%);
+    }
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .nav {
+    display: flex;
+    padding-inline: 33px;
+    &__toggle {
+      display: none;
+    }
+
+    &__logo {
+      width: 60px;
+    }
+    &__menu {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+
+  //Link Underline Effect on hover
+  .menu {
+    width: 50%;
+
+    &__link:hover a::before {
+      content: "";
+      position: absolute;
+      height: 8px;
+      width: 70px;
+      background-color: var.$accent-color;
+      bottom: 0;
+    }
+  }
+}
+
+@media screen and (min-width: 1080px) {
+  .nav {
+    padding-inline: 70px;
+    padding-block: 20px;
+
+    &__logo {
+      width: 60px;
+    }
+
+    &__menu {
+      width: 35%;
     }
   }
 }
