@@ -9,15 +9,10 @@ body {
   font-family: type.$body-font;
 }
 
-main {
-  max-width: 1280px;
-  margin-inline: auto;
-}
-
 article {
   margin-block: 70px;
-  margin-inline: auto;
-  max-width: 1080px;
+  margin-inline: 15px;
+  max-width: 1280px;
 }
 
 .hero {
@@ -25,8 +20,73 @@ article {
   &__heading {
     margin-block-end: 90px;
     font-size: 3rem;
+    font-variation-settings: type.$article-heading-wght;
+  }
+}
+
+.about {
+  @include mix.base-box-styles;
+  border-radius: var.$box-border-radius;
+  padding: 20px;
+  &__heading {
+    text-align: center;
+    @include mix.article-heading-styles;
+  }
+  &__heading::after {
+    content: "";
+    position: absolute;
+    height: 8px;
+    width: 120px;
+    background-color: var.$accent-color;
+    bottom: -5px;
+    left: calc(50% - 60px);
+  }
+
+  .paragraph {
+    font-size: 1.3rem;
+    margin-block: 3rem;
+    &__larger-text {
+      font-size: 1.5rem;
+    }
   }
 }
 
 @media screen and (min-width: var.$breakpoint-tablet) {
+  article {
+    margin-inline: 20px;
+  }
+  .about {
+    padding-inline: 90px;
+  }
+
+  .paragraph {
+    font-size: 1.4rem;
+    &__larger-text {
+      font-size: 1.7rem;
+    }
+  }
+}
+
+@media screen and (min-width: var.$breakpoint-desktop) {
+  article {
+    margin-inline: auto;
+  }
+  .about {
+    padding-inline: 190px;
+    padding-block-end: 90px;
+
+    &__paragraph:nth-child(odd) {
+      margin-inline-start: 120px;
+    }
+
+    &__paragraph:nth-child(even) {
+      margin-inline-end: 120px;
+    }
+  }
+
+  .paragraph {
+    &__larger-text {
+      font-size: 2rem;
+    }
+  }
 }

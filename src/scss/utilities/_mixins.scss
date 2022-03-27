@@ -1,6 +1,13 @@
 @use "variables" as var;
-
+@use "../base/typography" as type;
 @mixin base-box-styles {
   background-color: var.$body-box-background-color;
   box-shadow: var.$body-box-shadow;
+}
+
+@mixin article-heading-styles {
+  position: relative;
+  font-variation-settings: type.$article-heading-wght;
+  font-size: 2.5rem;
+  margin-block-end: 48px;
 }
