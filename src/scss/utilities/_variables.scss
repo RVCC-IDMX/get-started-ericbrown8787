@@ -1,11 +1,18 @@
 //colors
 $page--background-color: #f5f5f5;
 $body-box-background-color: #ffffff;
-$body-box-shadow: 0 4px 14px hsl(0deg, 100%, 0%, 15%);
 $accent-color: #8ef0ba;
+$icon-color: #04805e;
+$button-text-color: #ffffff;
 
 //box styling
 $box-border-radius: 0.5rem;
+$body-box-shadow: 0 4px 14px hsl(0deg, 100%, 0%, 15%);
+$article-box-padding: 20px;
+
+//form
+$form-element-height: 43px;
+$form-element-max-width: 510px;
 
 //Breakpoints
 $breakpoint-desktop: 1080px;

@@ -56,7 +56,7 @@
         </div>
       </article>
 
-      <article class="about">
+      <article class="about" id="about">
         <h2 class="about__heading">About</h2>
         <p class="about__paragraph about__paragraph--1 paragraph">
           <span class="paragraph__larger-text">Boy oh boy,</span> we sure do
@@ -81,6 +81,53 @@
           and send them to other crabs. It all comes full circle. It’s cards and
           crabs all the way down.
         </p>
+      </article>
+
+      <article class="contact" id="contact">
+        <form
+          id="contact-form"
+          class="contact-form"
+          name="contact-form"
+          data-netlify="true"
+          method="post"
+        >
+          <fieldset class="contact-form__fields">
+            <legend class="contact-form__legend">Contact</legend>
+
+            <!--Name-->
+            <label class="contact-form__label" for="name">Name</label>
+            <input
+              class="contact-form__input"
+              type="text"
+              id="name"
+              name="name"
+              required
+            />
+
+            <!--Email-->
+            <label class="contact-form__label" for="email">Email</label>
+            <input
+              class="contact-form__input"
+              type="email"
+              id="email"
+              name="email"
+              required
+            />
+
+            <!--Message-->
+            <label class="contact-form__label" for="message">Message</label>
+            <textarea
+              class="contact-form__input contact-form__input--message"
+              id="message"
+              name="message"
+              required
+            >
+            </textarea>
+
+            <!--Submit Button-->
+            <button class="contact-form__button" type="submit">Submit</button>
+          </fieldset>
+        </form>
       </article>
     </main>
 

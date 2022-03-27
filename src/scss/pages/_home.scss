@@ -27,19 +27,12 @@ article {
 .about {
   @include mix.base-box-styles;
   border-radius: var.$box-border-radius;
-  padding: 20px;
+  padding: var.$article-box-padding;
   &__heading {
-    text-align: center;
     @include mix.article-heading-styles;
-  }
-  &__heading::after {
-    content: "";
-    position: absolute;
-    height: 8px;
-    width: 120px;
-    background-color: var.$accent-color;
-    bottom: -5px;
-    left: calc(50% - 60px);
+    &::after {
+      @include mix.article-heading-underline;
+    }
   }
 
   .paragraph {
@@ -47,7 +40,58 @@ article {
     margin-block: 3rem;
     &__larger-text {
       font-size: 1.5rem;
+      font-variation-settings: type.$about-emphasized-text-wght;
     }
+  }
+}
+
+.contact {
+  @include mix.base-box-styles;
+  border-radius: var.$box-border-radius;
+  padding: var.$article-box-padding;
+  padding-block-end: 76px;
+}
+
+.contact-form {
+  &__fields {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: none;
+  }
+
+  &__legend {
+    @include mix.article-heading-styles;
+    &::after {
+      @include mix.article-heading-underline;
+    }
+  }
+
+  &__label,
+  &__input {
+    width: 100%;
+    max-width: var.$form-element-max-width;
+  }
+
+  &__label {
+    font-size: 1.4rem;
+    font-variation-settings: type.$form-label-wght;
+  }
+
+  &__input {
+    border: none;
+    height: var.$form-element-height;
+    box-shadow: var.$body-box-shadow inset;
+    margin-bottom: 2rem;
+
+    &--message {
+      height: 205px;
+    }
+  }
+
+  &__button {
+    @include mix.button-styles;
   }
 }
 
