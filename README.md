@@ -3,15 +3,11 @@
 ## About
 
 This is a responsive site built based off of an expanded version of the design described in the following Figma
-tutorial by Angela Delise:
-
-https://www.youtube.com/watch?v=oYCesPcxpEw
+[tutorial](https://www.youtube.com/watch?v=oYCesPcxpEw) by Angela Delise:
 
 ## External Sources:
 
-**Greeting Card Header Logo Image/Favicon:** From SVGRepo.com, Colors edited:
-
-https://www.svgrepo.com/svg/23989/greeting-card
+[**Greeting Card Header Logo Image/Favicon:**](https://www.svgrepo.com/svg/23989/greeting-card) From SVGRepo. Colors edited.
 
 ## How to use this repo
 
