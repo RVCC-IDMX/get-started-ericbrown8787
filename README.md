@@ -1,4 +1,17 @@
-# Starter Page Builder
+# Get Started- Responsive Page From Figma Design
+
+## About
+
+This is a responsive site built based off of an expanded version of the design described in the following Figma
+tutorial by Angela Delise:
+
+https://www.youtube.com/watch?v=oYCesPcxpEw
+
+## External Sources:
+
+**Greeting Card Header Logo Image/Favicon:** From SVGRepo.com, Colors edited:
+
+https://www.svgrepo.com/svg/23989/greeting-card
 
 ## How to use this repo
 

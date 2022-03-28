@@ -4,8 +4,9 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Platform Ticket</title>
+    <title>Get Started</title>
     <link rel="stylesheet" href="scss/main.scss" />
+    <link rel="icon" type="favicon" href="img/favicon.svg" />
   </head>
 
   <body>
@@ -19,12 +20,12 @@
         <input type="checkbox" id="nav__checkbox" class="nav__checkbox" />
 
         <label for="nav__checkbox" class="nav__toggle">
-          <div class="nav__hamburger-menu"></div
+          <span class="nav__hamburger-menu"></span
         ></label>
         <ul class="nav__menu menu">
-          <li class="menu__link"><a href="">Get Started</a></li>
-          <li class="menu__link"><a href="">About</a></li>
-          <li class="menu__link"><a href="">Contact</a></li>
+          <li class="menu__link"><a href="#hero">Get Started</a></li>
+          <li class="menu__link"><a href="#about">About</a></li>
+          <li class="menu__link"><a href="#contact">Contact</a></li>
         </ul>
       </nav>
     </header>
@@ -83,7 +84,7 @@
         </p>
       </article>
 
-      <article class="contact" id="contact">
+      <div class="contact" id="contact">
         <form
           id="contact-form"
           class="contact-form"
@@ -128,9 +129,15 @@
             <button class="contact-form__button" type="submit">Submit</button>
           </fieldset>
         </form>
-      </article>
+      </div>
     </main>
 
-    <footer></footer>
+    <footer class="footer">
+      <a
+        class="footer__link"
+        href="https://www.svgrepo.com/svg/23989/greeting-card"
+        >Greeting card icon from svgrepo.com</a
+      >
+    </footer>
   </body>
 </html>

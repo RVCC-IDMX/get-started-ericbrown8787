@@ -9,7 +9,9 @@ body {
   font-family: type.$body-font;
 }
 
-article {
+.hero,
+.about,
+.contact {
   margin-block: 70px;
   margin-inline: 15px;
   max-width: 1280px;
@@ -17,6 +19,7 @@ article {
 
 .hero {
   text-align: center;
+
   &__heading {
     margin-block-end: 90px;
     font-size: 3rem;
@@ -95,8 +98,23 @@ article {
   }
 }
 
+.footer {
+  font-family: type.$body-font;
+  display: flex;
+  padding: 10px;
+  &__link {
+    margin-inline: auto;
+    display: block;
+    color: black;
+    text-decoration: none;
+    font-size: 0.8rem;
+  }
+}
+
 @media screen and (min-width: var.$breakpoint-tablet) {
-  article {
+  .hero,
+  .about,
+  .contact {
     margin-inline: 20px;
   }
   .about {
@@ -112,7 +130,9 @@ article {
 }
 
 @media screen and (min-width: var.$breakpoint-desktop) {
-  article {
+  .hero,
+  .about,
+  .contact {
     margin-inline: auto;
   }
   .about {
