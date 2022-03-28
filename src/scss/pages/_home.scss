@@ -65,6 +65,7 @@ body {
   }
 
   &__legend {
+    margin-inline: auto;
     @include mix.article-heading-styles;
     &::after {
       @include mix.article-heading-underline;
